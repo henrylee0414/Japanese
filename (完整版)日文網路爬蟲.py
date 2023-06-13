@@ -15,6 +15,11 @@ for num in range(5, 2, -1):
     #建立新的word檔
     doc = Document()
     
+    #設置headers
+    headers = {
+         'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36',
+        }
+    
     #用requests向網址發送get請求，並使用BeautifulSoup解析
     url = f"https://www.sigure.tw/learn-japanese/vocabulary/n{num}/"
     response = requests.get(url)
